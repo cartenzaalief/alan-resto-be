@@ -20,7 +20,7 @@ module.exports = {
     fs.writeFileSync("./db.json", JSON.stringify(data));
     return res.status(200).send({
       success: true,
-      message: "Success",
+      message: "Success.",
     });
   },
   data: (req, res) => {
@@ -33,14 +33,14 @@ module.exports = {
     if (getIndex < 0) {
       res.status(200).send({
         success: false,
-        message: "Data not found",
+        message: "Data not found.",
       });
     } else {
       data.foods.splice(getIndex, 1);
       fs.writeFileSync("./db.json", JSON.stringify(data));
       res.status(200).send({
         success: true,
-        message: "Success"
+        message: "Success."
       })
     }
   },
